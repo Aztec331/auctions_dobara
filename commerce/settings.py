@@ -71,15 +71,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'commerce.wsgi.application'
 
 
-# Database
+# Database postgresql
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'aztec',
+        'USER': 'postgres',
+        'PASSWORD': 'aztec',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
 
 AUTH_USER_MODEL = 'auctions.User'
 
