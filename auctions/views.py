@@ -6,7 +6,7 @@ from django.urls import reverse
 
 from .models import User,Category, Listing
 
-
+#this is main branch
 def index(request):
     return render(request, "auctions/index.html")
 
